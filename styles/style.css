@@ -1,0 +1,302 @@
+/* fonts  */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
+/* common styles */
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Navigation bar */
+header {
+  background-color: #2d25a0;
+}
+.top-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 159px;
+  margin-right: 120px;
+  padding-top: 42px;
+}
+
+.top-nav a,
+i {
+  padding-left: 20px;
+  text-decoration: none;
+  color: white;
+}
+.login {
+  background-color: #e02c6d;
+  text-align: center;
+  padding: 2px;
+}
+.bottom-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+
+.bottom-left-nav .heading {
+  width: 350px;
+  height: 230px;
+  font-size: 200%;
+}
+.live {
+  width: 168px;
+  height: 44px;
+  text-align: center;
+  background-color: #e02c6d;
+}
+.live p {
+  padding-top: 10px;
+}
+.bottom-right-nav img {
+  width: 500px;
+}
+
+/* Animation */
+.animation {
+  display: flex;
+  justify-content: center;
+}
+.field:hover .player1 {
+  transform: rotate(-60deg);
+}
+
+.field {
+  width: 30%;
+  height: 10%;
+}
+
+.ball {
+  position: relative;
+  left: 400px;
+  bottom: 360px;
+  transition: transform 2s ease-out 0.2s;
+}
+.ball img {
+  width: 40%;
+}
+.field:hover .ball {
+  transform: translate(500px, -500px);
+}
+.player1 {
+  transition: transform 0.5s ease-in;
+}
+
+/* Styles for main starts here  */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* Styles for Players */
+.players {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 40px;
+  grid-column-gap: 40px;
+  margin-top: 70px;
+}
+
+.player {
+  display: flex;
+  flex-direction: column;
+  width: 330px;
+  height: 456px;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+  padding: 5%;
+}
+.player img {
+  width: 330px;
+  height: 256px;
+}
+
+/* Styles for highlights */
+.highlights {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-left: 9%;
+  margin-right: 6%;
+  margin-top: 5%;
+}
+.all-highlights {
+  display: flex;
+  flex-direction: column;
+}
+.highlight-image img {
+  width: 567px;
+  height: 427px;
+}
+.live2 {
+  width: 168px;
+  height: 44px;
+  text-align: center;
+  background-color: #e02c6d;
+}
+
+/* styles for blogs  */
+.top-blogs {
+  width: 100%;
+  margin-left: 6%;
+}
+
+.blogs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 15px;
+}
+
+.blog {
+  display: flex;
+  width: 80%;
+  align-items: center;
+  /* justify-content: center; */
+}
+.blog .thumbnail img {
+  width: 177px;
+  height: 117px;
+}
+.blog-info {
+  margin-left: 16px;
+}
+.blog-title {
+  font-size: 20px;
+}
+.blog-author {
+  color: #9f9f9f;
+  font-size: 16px;
+}
+.blog-author a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #9894aa;
+}
+
+/* Styles for World Rankings  */
+
+.top-world {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+
+}
+
+.teams img {
+  padding-left: 100px;
+  padding-right: 100px;
+  margin-top: 5px;
+}
+.world-ranking {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+/* styles for Voting  */
+form {
+  margin-right: 30%;
+}
+.photo-album {
+  width: 70%;
+}
+.photo-frame {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid greenyellow;
+  position: relative;
+  margin: 10px;
+  overflow: hidden;
+}
+.photo img {
+  width: 100%;
+  border-radius: 10px;
+}
+.photo-detail {
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+.photo-detail h3 {
+  background-color: rgba(124, 29, 29, 0.363);
+  color: white;
+  padding-left: 5%;
+}
+
+.photo-frame:hover .photo-detail {
+  display: block;
+  background-color: rgba(255, 105, 180, 0.144);
+}
+.photo-frame:hover .photo {
+  transform: scale(1.2);
+  transition: transform 2s ease-in-out;
+}
+
+.photo-album {
+  display: flex;
+  flex-direction: column;
+}
+/* Styles for footer  */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Media Query  */
+
+/* Mobile devices  */
+@media only screen and (max-width: 688px) {
+  .container{
+    width: 100%;
+  }
+  .top-nav,
+  .bottom-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .animation,
+  .field {
+    width: 100%;
+  }
+  .animation .field img {
+    width: 80%;
+  }
+  .animation .field .ball img {
+    width: 20%;
+  }
+  .players {
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 40px;
+  }
+  .highlights{
+    display: flex;
+    flex-direction: column;
+
+  }
+  .highlights img{
+    margin-top: 5%;
+    width: 328px;
+    height: 248px;
+  }
+  .blogs{
+    grid-template-columns: repeat(1, 1fr);
+    
+  }
+  .top-world{
+    display: flex;
+    flex-direction: column;
+  }
+  footer{
+    width: 80%;
+    align-items: flex-end;
+  }
+}
+
